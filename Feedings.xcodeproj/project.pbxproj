@@ -13,6 +13,8 @@
 		0A42305D1ECF6C0C007DB63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A42305C1ECF6C0C007DB63D /* Assets.xcassets */; };
 		0A4230601ECF6C0C007DB63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A42305E1ECF6C0C007DB63D /* LaunchScreen.storyboard */; };
 		0A42306B1ECF6C0C007DB63D /* FeedingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42306A1ECF6C0C007DB63D /* FeedingsTests.swift */; };
+		0A4230771ECF7075007DB63D /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4230761ECF7075007DB63D /* Argo.framework */; };
+		0A4230791ECF7078007DB63D /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4230781ECF7078007DB63D /* Runes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0A4230661ECF6C0C007DB63D /* FeedingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A42306A1ECF6C0C007DB63D /* FeedingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingsTests.swift; sourceTree = "<group>"; };
 		0A42306C1ECF6C0C007DB63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A4230761ECF7075007DB63D /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		0A4230781ECF7078007DB63D /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4230771ECF7075007DB63D /* Argo.framework in Frameworks */,
+				0A4230791ECF7078007DB63D /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 				0A4230541ECF6C0C007DB63D /* Feedings */,
 				0A4230691ECF6C0C007DB63D /* FeedingsTests */,
 				0A4230531ECF6C0C007DB63D /* Products */,
+				0A4230751ECF7074007DB63D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +103,15 @@
 			path = FeedingsTests;
 			sourceTree = "<group>";
 		};
+		0A4230751ECF7074007DB63D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A4230781ECF7078007DB63D /* Runes.framework */,
+				0A4230761ECF7075007DB63D /* Argo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +122,7 @@
 				0A42304E1ECF6C0C007DB63D /* Sources */,
 				0A42304F1ECF6C0C007DB63D /* Frameworks */,
 				0A4230501ECF6C0C007DB63D /* Resources */,
+				0A42307A1ECF7098007DB63D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,6 +211,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A42307A1ECF7098007DB63D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A42304E1ECF6C0C007DB63D /* Sources */ = {
@@ -341,6 +376,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P3HAZUW5GC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Feedings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.kmcg.Feedings;
@@ -354,6 +393,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P3HAZUW5GC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Feedings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.kmcg.Feedings;
@@ -409,6 +452,7 @@
 				0A4230711ECF6C0C007DB63D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A4230721ECF6C0C007DB63D /* Build configuration list for PBXNativeTarget "FeedingsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +461,7 @@
 				0A4230741ECF6C0C007DB63D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

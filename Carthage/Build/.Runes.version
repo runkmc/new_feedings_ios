@@ -1,0 +1,27 @@
+{
+  "iOS" : [
+    {
+      "hash" : "597d6aa72464ee555a0473851d86a63dc727950afc107d032f4cd684339b42b8",
+      "name" : "Runes"
+    }
+  ],
+  "commitish" : "v4.0.1",
+  "watchOS" : [
+    {
+      "hash" : "67d849213a166214fb40d3daf510771d8ec151c15f16650fb8dcffcb8ede9376",
+      "name" : "Runes"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "ce92a8f497cca96c7b5bf97fb295c4f39e52ba09eb875f3bdf76d91309cbc418",
+      "name" : "Runes"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "75385876f24242f2a8344171c1712674724a9a8262b8d8108ac0e5fe5c42169d",
+      "name" : "Runes"
+    }
+  ]
+}

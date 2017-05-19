@@ -1,0 +1,27 @@
+{
+  "iOS" : [
+    {
+      "hash" : "44a68611c85c3294906089c1057d83f2da2833422c45730a1817be99f3d03c2f",
+      "name" : "Argo"
+    }
+  ],
+  "commitish" : "v4.1.2",
+  "watchOS" : [
+    {
+      "hash" : "2105d306100f72ee328c7390928352c0e98036736b69622dfc1fa33b063c9ec8",
+      "name" : "Argo"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "48f7794ba1e8e8eb603d41c6198ad34800f4a7fc2a74d5b024dfda68093832ef",
+      "name" : "Argo"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "0b8b365086599575ee3539706e4fed66be434cdd960581aa3916c6d9f8b97ead",
+      "name" : "Argo"
+    }
+  ]
+}
